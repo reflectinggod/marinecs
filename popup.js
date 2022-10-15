@@ -10,9 +10,21 @@ p110btn.onclick = function () {
     }
   );
 };
-const ruspriorbtn = document.getElementById("rusprior-btn");
-ruspriorbtn.onclick = function () {
-  const contentToCopy = document.getElementById("rusprior").innerText;
+const rusprior_rusbtn = document.getElementById("rusprior_rus-btn");
+rusprior_rusbtn.onclick = function () {
+  const contentToCopy = document.getElementById("rusprior_rus").innerText;
+  navigator.clipboard.writeText(contentToCopy).then(
+    function () {
+      console.log("Copied to clipboard.");
+    },
+    function (err) {
+      console.error("Unable to copy ", err);
+    }
+  );
+};
+const rusprior_engbtn = document.getElementById("rusprior_eng-btn");
+rusprior_engbtn.onclick = function () {
+  const contentToCopy = document.getElementById("rusprior_eng").innerText;
   navigator.clipboard.writeText(contentToCopy).then(
     function () {
       console.log("Copied to clipboard.");
